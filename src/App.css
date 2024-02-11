@@ -1,56 +1,123 @@
-.container {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 20px;
+/* App.css */
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.tabs {
+/* App */
+.app {
   display: flex;
   flex-direction: column;
+  height: 100vh;
 }
 
-.tab {
-  margin-bottom: 20px;
-}
-
-.tab input[type="radio"] {
-  display: none;
-}
-
-.tab label {
-  cursor: pointer;
-  padding: 10px;
+/* Profile Info */
+.profile-info {
+  display: flex;
+  align-items: center;
+  padding: 20px;
   background-color: #f0f0f0;
 }
 
-.tab label:hover {
+.profile-avatar {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  margin-right: 20px;
+}
+
+.profile-name {
+  font-size: 1.2rem;
+  margin-bottom: 5px;
+}
+
+.profile-bio {
+  margin: 0;
+  color: #666;
+}
+
+/* Tabs */
+.tabs {
+  display: flex;
+  flex-grow: 1;
+  overflow: hidden;
+}
+
+.tabs input[type="radio"] {
+  display: none;
+}
+
+.tabs label {
+  cursor: pointer;
+  padding: 15px;
+  flex-grow: 1;
+  text-align: center;
+  background-color: #f0f0f0;
+  transition: background-color 0.3s ease;
+}
+
+.tabs label:hover {
   background-color: #e0e0e0;
 }
 
-.tab .content {
+.tabs input[type="radio"]:checked + label {
+  background-color: #fff;
+}
+
+.tab-content {
+  flex-grow: 1;
+  overflow-y: auto;
+}
+
+.tab-content .content {
   display: none;
   padding: 20px;
 }
 
-.tab input[type="radio"]:checked ~ .content {
+.tab-content .content:first-child {
   display: block;
 }
 
-.user-info {
+/* Articles */
+.article {
   display: flex;
   align-items: center;
   margin-bottom: 20px;
 }
 
-.user-info img {
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
+.article img {
+  width: 80px;
+  height: 80px;
+  border-radius: 5px;
   margin-right: 20px;
 }
 
+.article h3 {
+  margin: 0;
+  font-size: 1rem;
+  color: #333;
+}
+
+.article p {
+  margin: 5px 0;
+  color: #666;
+}
+
+/* Settings Button */
 .settings-button {
-  position: fixed;
-  top: 20px;
-  right: 20px;
+  align-self: flex-end;
+  margin: 20px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: #fff;
+  cursor: pointer;
+}
+
+.settings-button:hover {
+  background-color: #0056b3;
 }
