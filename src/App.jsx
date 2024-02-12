@@ -7,7 +7,7 @@ const App = () => {
       <div className="profile-info">
         <img src="https://www.gravatar.com/avatar/205e460b479e2e5b48aec07710c08d50" alt="Avatar" className="profile-avatar" />
         <div>
-          <p className="profile-name">Name: John Doe</p>
+          <p className="profile-name">Name: John  Doe</p>
           <p className="profile-bio">Bio: Passionate about news!</p>
         </div>
       </div>
